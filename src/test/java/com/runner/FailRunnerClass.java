@@ -11,18 +11,15 @@ import com.report.Report;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags="@LoginPage",dryRun= false, features="C:\\Users\\shanm\\eclipse-workspace\\AdcatinHotelCucumber\\src\\test\\resources\\features", glue="com.stepdefinition",
-publish= false,monochrome= true, plugin= {"pretty","json:target//Output.json", "rerun:target/failed_scenarios.txt"},snippets=SnippetType.CAMELCASE )
+@CucumberOptions(plugin= {"pretty", "json:target\\Output.json"}, glue="com.stepdefinition", features="@target/failed_scenarios.txt")
 
-public class TestRunnerClass extends BaseClass {
+public class FailRunnerClass extends BaseClass{
 	
 	@AfterClass
 	public static void afterClass() throws FileNotFoundException, IOException {
 		Report.generateReport(System.getProperty("user.dir")+getValueFromPropertyFile("jsonPath"));
-		
 	}
 
 }
