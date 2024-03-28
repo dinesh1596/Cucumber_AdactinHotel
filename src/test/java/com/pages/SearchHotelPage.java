@@ -320,10 +320,10 @@ public class SearchHotelPage extends BaseClass {
 
 	public void userVerifyTheSearchConditionsAreClearedAfterClickTheResetButton() {
 		 String checkInDateValue=getAttributeValue(getDateIn(),"value") ;
-		 Assert.assertTrue(checkInDateValue, true);
+		 Assert.assertTrue( checkInDateValue,true);
 		 String checkOutDateValue=getAttributeValue(getDateOut(),"value") ;
-		 Assert.assertTrue(checkOutDateValue, true);
-	}
+		 Assert.assertTrue( checkOutDateValue,true);
+		}
 
 	public void userClickTheBookedItineraryLink() {
         click(getBookedItineraryLink());
