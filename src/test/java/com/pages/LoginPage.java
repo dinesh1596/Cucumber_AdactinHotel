@@ -6,6 +6,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.base.BaseClass;
 
+import io.cucumber.datatable.DataTable;
+
+import java.util.List;
+
 import org.junit.Assert;
 
 public class LoginPage extends BaseClass{
@@ -72,9 +76,10 @@ public class LoginPage extends BaseClass{
 		  String homePageText = getText(getHomePageText()); 
 		  Assert.assertEquals("Verify home page text", homePage, homePageText);
 	}
-	public void userEnter(String userName, String password) {
-		   sendKeys(getTxtusername(), userName);
-		   sendKeys(getTxtpassword(), password);
+
+	public void userEnterAnd(String userName, String password) {
+          sendKeys(getTxtusername(), userName);
+          sendKeys(getTxtpassword(), password);
 	}
 
 	public void userClicksTheLoginButton() {

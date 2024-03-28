@@ -1,8 +1,12 @@
 package com.stepdefinition;
 
+import java.util.List;
+import java.util.Map;
+
 import com.base.BaseClass;
 import com.pageobjectmanager.PageObjectManager;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 
 public class TC_2LoginPageStep extends BaseClass {
@@ -13,10 +17,9 @@ public class TC_2LoginPageStep extends BaseClass {
 	public void userVerifyingTheTextInHomePage(String homePage) {
 	   pom.getLoginPage().userVerifyingTheTextInHomePage(homePage);
 	}
-	@When("User enter {string},{string}")
-	public void userEnter(String userName, String password) {
-		pom.getLoginPage().userEnter(userName,password);
-	   
+	@When("User enter {string} and {string}")
+	public void userEnterAnd(String userName, String password) {
+	    pom.getLoginPage().userEnterAnd(userName, password);
 	}
 	@When("User clicks the login button")
 	public void userClicksTheLoginButton() {
@@ -25,6 +28,22 @@ public class TC_2LoginPageStep extends BaseClass {
 	@Then("User should be successfully logged in, verify the text message  {string}")
 	public void userShouldBeSuccessfullyLoggedInVerifyTheTextMessage(String loginMsg) {
 	   pom.getLoginPage().userShouldBeSuccessfullyLoggedInVerifyTheTextMessage(loginMsg);
+	}
+	@When("User enter the invalid credentials")
+	public void userEnterTheInvalidCredentials(io.cucumber.datatable.DataTable dataTable) {
+	    List<Map<String, String>> credentials = dataTable.asMaps(String.class, String.class);
+	    String userName=credentials.get(0).get("userName");
+	    String password=credentials.get(0).get("password");
+	    sendKeys(pom.getLoginPage().getTxtusername(), userName);
+	    sendKeys(pom.getLoginPage().getTxtpassword(), password);
+	}
+	@When("User enter the invalid Password")
+	public void userEnterTheInvalidPassword(io.cucumber.datatable.DataTable dataTable) {
+	    List<List<String>> credential = dataTable.asLists(String.class);
+	    String userName = credential.get(0).get(0);
+	    String password = credential.get(0).get(1);
+	    sendKeys(pom.getLoginPage().getTxtusername(), userName);
+	    sendKeys(pom.getLoginPage().getTxtpassword(), password);
 	}
 	@Then("User verify the invalid login credentials error message  {string}")
 	public void userVerifyTheInvalidLoginCredentialsErrorMessage(String invalidLoginText) {
