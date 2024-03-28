@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags="@BookHotel",dryRun= false, features="src\\test\\resources\\features", glue="com.stepdefinition",
+@CucumberOptions(tags="",dryRun= false, features="src\\test\\resources\\features", glue="com.stepdefinition",
 publish= false,monochrome= true, plugin= {"pretty","json:target//Output.json"},snippets=SnippetType.CAMELCASE )
 
 public class TestRunnerClass extends BaseClass {
