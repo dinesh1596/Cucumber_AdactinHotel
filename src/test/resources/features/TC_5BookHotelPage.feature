@@ -17,9 +17,8 @@ Feature: Book a Hotel in AdactinHotel
     And User click the book now button
     Then User verfiy the booking confirmation page "Booking Confirmation" and order Id is generated
      Examples: 
-      | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |firstName|lastName|billingAddress         |creditCardNo    |creditCardType|expiryMonth|expiryYear|cvvNumber|
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |Shanmathi|K       |2/23,ABC Street,Chennai|1234567891012345|VISA          |May        |2024      |258      |
-  
+      | userName    | password |location | hotels         | roomType  | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |firstName|lastName|billingAddress         |creditCardNo    |creditCardType|expiryMonth|expiryYear|cvvNumber|
+      | Shanmathi22 | AM29JB   |Sydney   | Hotel Sunshine | Standard  | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |Shanmathi|K       |2/23,ABC Street,Chennai|1234567891012345|VISA          |May        |2024      |258      |
    @BookHotel2 
    Scenario Outline: User book a hotel without filling all the fields
     Given User is on Home Page
