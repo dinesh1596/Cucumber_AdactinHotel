@@ -21,10 +21,12 @@ public class HooksClass extends BaseClass {
 	}
 	@After
 	public void afterScenario(Scenario scenario) {
-//		if(scenario.isFailed()) {
-//			scenario.attach(screenshot(), "images/png", "each after scenario");
-//		}
+		if(scenario.isFailed()) {
+			scenario.attach(screenshot(), "images/png", "each after scenario");
+		}
+		else {
 		scenario.attach(screenshot(), "images/png", "each after scenario");
+		}
 		quit();
 	}
 
