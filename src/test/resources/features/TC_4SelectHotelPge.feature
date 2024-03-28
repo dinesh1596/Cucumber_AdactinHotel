@@ -5,7 +5,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User directed to the booking page by selecting the hotel
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -22,7 +22,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User not drirected to the booking page without select the hotel
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -39,7 +39,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User redrirected to the search hotel page by clicking the cancel button
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -56,7 +56,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User redrirected to the search hotel page by clicking the search hotel link
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -73,7 +73,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User can access the Booked Itinerary page from select hotel page
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -90,7 +90,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User can access the Change Password page from select hotel page
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -107,7 +107,7 @@ Feature: Select the Hotel in AdactionHotel
   Scenario Outline: User can logout from select hotel page
     Given User is on Home Page
     Then User Verifying the text "Existing User Login - Build 1" in Home Page
-    When User enter "<userName>","<password>"
+    When User enter "<userName>" and "<password>"
     And User clicks the login button
     Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
     And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"

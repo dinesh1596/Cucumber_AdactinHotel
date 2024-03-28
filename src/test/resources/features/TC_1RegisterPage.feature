@@ -1,7 +1,7 @@
 @RegistrationPage
 Feature: Verifying the new  user registration
 
-  @Captacha
+  @WithoutCaptacha
   Scenario Outline: User can register the account by filling all the details without captcha Text field
     Given User is on Home Page
     And User click new user register here link
@@ -14,7 +14,7 @@ Feature: Verifying the new  user registration
       | userName  | password     | confirmPassword | fullName    | emailAddress       |
       | Shanmathi | ShanMathi@22 | ShanMathi@22    | Shanmathi K | shanmath@gmail.com |
   
-  @UserName
+  @WithoutUserName
   Scenario Outline: User can register the account by filling all the details without username field
     Given User is on Home Page
     And User click new user register here link
@@ -27,7 +27,7 @@ Feature: Verifying the new  user registration
       | password     | confirmPassword | fullName    | emailAddress       |
       | ShanMathi@22 | ShanMathi@22    | Shanmathi K | shanmath@gmail.com |
    
-   @Password
+   @WithoutPassword
    Scenario Outline: User can register the account by filling all the details without password field
     Given User is on Home Page
     And User click new user register here link
@@ -40,7 +40,7 @@ Feature: Verifying the new  user registration
       | userName  | confirmPassword | fullName    | emailAddress       |
       | Shanmathi | ShanMathi@22    | Shanmathi K | shanmath@gmail.com |
    
-   @ConfirmPassword
+   @WithoutConfirmPassword
    Scenario Outline: User can register the account by filling all the details without confirm password field
     Given User is on Home Page
     And User click new user register here link
@@ -53,7 +53,7 @@ Feature: Verifying the new  user registration
       | userName  | password     |     fullName    | emailAddress       |
       | Shanmathi | ShanMathi@22 |  Shanmathi K    | shanmath@gmail.com |
    
-   @FullName
+   @WithoutFullName
    Scenario Outline: User can register the account by filling all the details without fullname field
     Given User is on Home Page
     And User click new user register here link
@@ -66,7 +66,7 @@ Feature: Verifying the new  user registration
       | userName  | password     | confirmPassword | emailAddress       |
       | Shanmathi | ShanMathi@22 | ShanMathi@22    | shanmath@gmail.com |
      
-    @EmailAddress
+    @WithoutEmailAddress
     Scenario Outline: User can register the account by filling all the details without emailaddress field
     Given User is on Home Page
     And User click new user register here link
@@ -79,7 +79,7 @@ Feature: Verifying the new  user registration
       | userName  | password     | confirmPassword | fullName    | 
       | Shanmathi | ShanMathi@22 | ShanMathi@22    | Shanmathi K |
     
-    @TermAndConditions
+    @WithoutTermAndConditions
     Scenario Outline: User can register the account by filling all the details without term and conditions field
     Given User is on Home Page
     And User click new user register here link

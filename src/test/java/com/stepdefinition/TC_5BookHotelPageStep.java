@@ -1,16 +1,85 @@
 package com.stepdefinition;
 
+import java.util.List;
+import java.util.Map;
+
+import com.base.BaseClass;
 import com.pageobjectmanager.PageObjectManager;
 
 import io.cucumber.java.en.*;
 
-public class TC_5BookHotelPageStep {
+public class TC_5BookHotelPageStep extends BaseClass{
 	
 	PageObjectManager pom=new PageObjectManager();
 	
 	@Then("User enters {string},{string},{string},{string},{string},{string},{string},{string}")
 	public void userEnters(String firstName, String lastName, String billingAddress, String creditCardNo, String creditCardType, String expiryMonth, String expiryYear, String cvvNumber) {
 	    pom.getBookHotelPage().userEnters(firstName, lastName, billingAddress, creditCardNo, creditCardType, expiryMonth, expiryYear, cvvNumber);
+	}
+	
+	@When("User enter the login credentials")
+	public void userEnterTheLoginCredentials(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String, String>> credentials = dataTable.asMaps(String.class, String.class);
+		String userName = credentials.get(0).get("userName");
+		String password = credentials.get(0).get("password");
+		sendKeys(pom.getBookHotelPage().getTxtusername(), userName);
+		sendKeys(pom.getBookHotelPage().getTxtpassword(), password);
+		}
+	@Then("User enter the search hotel details")
+	public void userEnterTheSearchHotelDetails(io.cucumber.datatable.DataTable dataTable) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+	    //
+	    // For other transformations you can register a DataTableType.
+		List<Map<String, String>> searchHotelDetails = dataTable.asMaps(String.class, String.class);
+		String location = searchHotelDetails.get(0).get("location");
+		String hotels = searchHotelDetails.get(0).get("hotels");
+		String roomType=searchHotelDetails.get(0).get("roomType");
+		String numberOfRooms=searchHotelDetails.get(0).get("numberOfRooms");
+		String checkInDate=searchHotelDetails.get(0).get("checkInDate");
+		String checkOutDate=searchHotelDetails.get(0).get("checkOutDate");
+		String adultperRoom=searchHotelDetails.get(0).get("adultperRoom");
+		String childrenPerRoom=searchHotelDetails.get(0).get("childrenPerRoom");
+	    selectByVisibleText(pom.getBookHotelPage().getLocation(), location);
+		selectByVisibleText(pom.getBookHotelPage().getHotels(), hotels);
+		selectByVisibleText(pom.getBookHotelPage().getRoomType(), roomType);
+		selectByVisibleText(pom.getBookHotelPage().getRoom_nos(), numberOfRooms);
+		clear(pom.getBookHotelPage().getDateIn());
+		sendKeys(pom.getBookHotelPage().getDateIn(), checkInDate);
+		clear(pom.getBookHotelPage().getDateOut());
+		sendKeys(pom.getBookHotelPage().getDateOut(), checkOutDate);
+		selectByVisibleText(pom.getBookHotelPage().getAdultRoom(), adultperRoom);
+		selectByVisibleText(pom.getBookHotelPage().getChildRoom(), childrenPerRoom);
+	}
+	@Then("User enters the booking details")
+	public void userEntersTheBookingDetails(io.cucumber.datatable.DataTable dataTable) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+	    //
+	    // For other transformations you can register a DataTableType.
+	    List<Map<String, String>> bookDetails = dataTable.asMaps(String.class, String.class);
+	    String firstName = bookDetails.get(0).get("firstName");
+	    String lastName = bookDetails.get(0).get("lastName");
+	    String billingAddress = bookDetails.get(0).get("billingAddress");
+	    String creditCardNo = bookDetails.get(0).get("creditCardNo");
+	    String creditCardType = bookDetails.get(0).get("creditCardType");
+	    String expiryMonth = bookDetails.get(0).get("expiryMonth");
+	    String expiryYear = bookDetails.get(0).get("expiryYear");
+	    String cvvNumber = bookDetails.get(0).get("cvvNumber");
+	    sendKeys(pom.getBookHotelPage().getFirstname(), firstName);
+	    sendKeys(pom.getBookHotelPage().getLastname(), lastName);
+	    sendKeys(pom.getBookHotelPage().getAddress(), billingAddress);
+	    sendKeys(pom.getBookHotelPage().getCcnum(), creditCardNo);
+	    selectByVisibleText(pom.getBookHotelPage().getCreditcard(), creditCardType);
+	    selectByVisibleText(pom.getBookHotelPage().getExpirydate(), expiryMonth);
+	    selectByVisibleText(pom.getBookHotelPage().getExpiryyear(), expiryYear);
+	    sendKeys(pom.getBookHotelPage().getCccvv(), cvvNumber);
 	}
 	@Then("User click the book now button")
 	public void userClickTheBookNowButton() {
