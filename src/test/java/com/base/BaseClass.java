@@ -233,7 +233,7 @@ public static WebDriver driver;
 	}
 	public String readValueFromExcel(String sheetName,int rownum,int cellnum) throws IOException {
 		String res="";
-		File file = new File ("C:\\Users\\shanm\\eclipse-workspace\\Hotel\\Data\\HotelDataDetails.xlsx");
+		File file = new File ("C:\\Users\\shanm\\eclipse-workspace\\AdcatinHotelCucumber\\Data\\HotelDataDetails.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		Workbook workbook = new XSSFWorkbook(stream);
 		Sheet sheet = workbook.getSheet(sheetName);
@@ -265,7 +265,7 @@ public static WebDriver driver;
 		}
 	
     public void writeDataCell(String SheetName, int rowIndex, int columnIndex,String data) throws IOException {
-    	File file=new File("C:\\Users\\shanm\\eclipse-workspace\\Hotel\\Data\\HotelDataDetails.xlsx");
+    	File file=new File("C:\\Users\\shanm\\eclipse-workspace\\AdcatinHotelCucumber\\Data\\HotelDataDetails.xlsx");
     	FileInputStream fileInputStream=new FileInputStream(file);
     	Workbook wb=new XSSFWorkbook(fileInputStream);
     	Sheet sh=wb.getSheet(SheetName);
@@ -277,7 +277,7 @@ public static WebDriver driver;
     }
     
     public void updateDataCell(String SheetName, int rowIndex, int columnIndex,String oldData, String newData) throws IOException {
-    	File file=new File("C:\\Users\\shanm\\eclipse-workspace\\Hotel\\Data\\HotelDataDetails.xlsx");
+    	File file=new File("C:\\Users\\shanm\\eclipse-workspace\\AdcatinHotelCucumber\\Data\\HotelDataDetails.xlsx");
     	FileInputStream fileInputStream=new FileInputStream(file);
     	Workbook wb=new XSSFWorkbook(fileInputStream);
     	Sheet sh=wb.getSheet(SheetName);
