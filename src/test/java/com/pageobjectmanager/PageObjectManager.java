@@ -1,6 +1,5 @@
 package com.pageobjectmanager;
 
-import com.pages.BookAndCancelHotelPage;
 import com.pages.BookHotelPage;
 import com.pages.BookedItineraryPage;
 import com.pages.LoginPage;
@@ -16,7 +15,7 @@ public class PageObjectManager {
 	private SelectHotelPage selectHotelPage;
 	private BookHotelPage bookHotelPage;
 	private BookedItineraryPage bookedItineraryPage;
-	private BookAndCancelHotelPage bookAndCancelHotelPage;
+	
 
 	public RegisterPage getRegisterPage() {
 		return (registerPage==null)?registerPage=new RegisterPage():registerPage;
@@ -35,9 +34,6 @@ public class PageObjectManager {
 	}
 	public BookedItineraryPage getBookedItineraryPage() {
 		return (bookedItineraryPage==null)?bookedItineraryPage=new BookedItineraryPage():bookedItineraryPage;
-	}
-	public BookAndCancelHotelPage getBookAndCancelHotelPage() {
-		return (bookAndCancelHotelPage==null)?bookAndCancelHotelPage=new BookAndCancelHotelPage():bookAndCancelHotelPage;
 	}
 	
 	
