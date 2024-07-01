@@ -11,7 +11,7 @@ Feature: Verifying the Login Details
     
     Examples:
        |userName     |password|
-       | Shanmathi22 | AM29JB |
+       | Shanmathi22 | E9Z51L |
 
   @Invalid
   Scenario: User Login with Invalid credentials
