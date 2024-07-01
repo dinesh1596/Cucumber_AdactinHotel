@@ -15,6 +15,32 @@ public class BookHotelPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(id = "username")
+	private WebElement txtusername;
+	@FindBy(id = "password")
+	private WebElement txtpassword;
+	@FindBy(id = "login")
+	private WebElement btnLogin;
+	@FindBy(id="location")
+	private WebElement location;
+	@FindBy(id="hotels")
+	private WebElement hotels;
+	@FindBy(id="room_type")
+	private WebElement roomType;
+	@FindBy(id="room_nos")
+	private WebElement room_nos;
+	@FindBy(id="datepick_in")
+	private WebElement dateIn;
+	@FindBy(id="datepick_out")
+	private WebElement dateOut;
+	@FindBy(id="adult_room")
+	private WebElement adultRoom;
+	@FindBy(id="child_room")
+	private WebElement childRoom;
+	@FindBy(id="Submit")
+	private WebElement searchBtn;
+	@FindBy(id="radiobutton_0")
+	private WebElement hotelSelection;
 	@FindBy(xpath = "//input[@id='first_name']")
 	private WebElement firstname;
 	@FindBy(xpath = "//input[@id='last_name']")
@@ -64,6 +90,46 @@ public class BookHotelPage extends BaseClass {
 	
 	
 	
+	
+	public WebElement getLocation() {
+		return location;
+	}
+	public WebElement getHotels() {
+		return hotels;
+	}
+	public WebElement getRoomType() {
+		return roomType;
+	}
+	public WebElement getRoom_nos() {
+		return room_nos;
+	}
+	public WebElement getDateIn() {
+		return dateIn;
+	}
+	public WebElement getDateOut() {
+		return dateOut;
+	}
+	public WebElement getAdultRoom() {
+		return adultRoom;
+	}
+	public WebElement getChildRoom() {
+		return childRoom;
+	}
+	public WebElement getSearchBtn() {
+		return searchBtn;
+	}
+	public WebElement getHotelSelection() {
+		return hotelSelection;
+	}
+	public WebElement getTxtusername() {
+		return txtusername;
+	}
+	public WebElement getTxtpassword() {
+		return txtpassword;
+	}
+	public WebElement getBtnLogin() {
+		return btnLogin;
+	}
 	public WebElement getSelecthotel() {
 		return selecthotel;
 	}

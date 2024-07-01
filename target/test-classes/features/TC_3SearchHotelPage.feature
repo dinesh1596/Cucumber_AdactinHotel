@@ -1,11 +1,11 @@
-@SearchHotelPage
+@HotelBooking
 Feature: Search Hotels in AdactinHotel
 
    @BookHotel
    Scenario Outline: User search the hotel by filling all the fields
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -15,13 +15,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @MandatoryFields
    Scenario Outline: User search the hotel by filling the mandatory fields 
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>" and  non mandatory fields are not filled
@@ -31,13 +31,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | numberOfRooms|checkInDate|checkOutDate|adultperRoom|
-    |Shanmathi22| AM29JB       | Sydney   | 2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |
+    |Shanmathi22| E9Z51L       | Sydney   | 2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |
    
    @NonMandatoryFields 
    Scenario Outline: User search the hotel by filling the non mandatory fields 
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<numberOfRooms>","<hotels>","<roomType>","<adultperRoom>","<childrenPerRoom>" and mandatory fields are not filled
@@ -47,13 +47,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | numberOfRooms                |hotels         | roomType    |adultperRoom                        |childrenPerRoom|
-    |Shanmathi22| AM29JB       | - Select Number of Rooms -   |Hotel Sunshine | Standard    |- Select Adults per Room -          |1 - One        | 
+    |Shanmathi22| E9Z51L       | - Select Number of Rooms -   |Hotel Sunshine | Standard    |- Select Adults per Room -          |1 - One        | 
     
    @WithoutLocation 
    Scenario Outline: User search the hotel by filling all the fields without location field
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>"
@@ -63,13 +63,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @WithoutNoOfRooms
    Scenario Outline: User search the hotel by filling all the fields without Number of Rooms field
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>" and Number of Rooms field is not filled
@@ -79,13 +79,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         |  roomType |  numberOfRooms              |checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  | - Select Number of Rooms -  |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  | - Select Number of Rooms -  |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
     
    @WithoutCheckInDate 
    Scenario Outline: User search the hotel by filling all the fields without Check In Date field
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkOutDate>","<adultperRoom>","<childrenPerRoom>" and Check In Date field is not filled
@@ -95,13 +95,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 23/04/2024 |2 - Two     |1 - One        |
    
    @WithoutCheckOutDate 
    Scenario Outline: User search the hotel by filling all the fields without Check Out Date field
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<adultperRoom>","<childrenPerRoom>" and Check Out Date field is not filled
@@ -111,13 +111,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate |adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |2 - Two     |1 - One        |
    
    @AdultsPerRoom
    Scenario Outline: User search the hotel by filling all the fields without Adults per Room field
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<adultPerRoom>","<childrenPerRoom>" and Adults per Room field is not filled
@@ -127,13 +127,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate |checkOutDate|adultPerRoom               |childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |21/04/2024  |- Select Adults per Room - |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |21/04/2024  |- Select Adults per Room - |1 - One        |
    
    @ResetButton
    Scenario Outline: User clear the search conditions by clicking reset button
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User enter "<location>","<hotels>","<roomType>","<numberOfRooms>","<checkInDate>","<checkOutDate>","<AdultperRoom>","<childrenPerRoom>"
@@ -143,13 +143,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|AdultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @BookedItinerary 
    Scenario Outline: User can access the Booked Itinerary page from search hotel page
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User click the Booked Itinerary link
@@ -158,13 +158,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
    
    @ChangePassword 
    Scenario Outline: User can access the Change Password page from search hotel page
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User click the Change Password link
@@ -173,13 +173,13 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
    
    @Logout 
    Scenario Outline: User can logout from search hotel page
    Given User is on Home Page
    Then User Verifying the text "Existing User Login - Build 1" in Home Page
-   When User enter "<userName>","<password>" 
+   When User enter "<userName>" and "<password>" 
    And User clicks the login button 
    Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
    And User click the logout link
@@ -188,7 +188,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
   
   
     
