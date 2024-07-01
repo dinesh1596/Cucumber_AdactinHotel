@@ -1,4 +1,4 @@
-@LoginPage
+@HotelBooking
 Feature: Verifying the Login Details
 
   @Valid
@@ -11,7 +11,7 @@ Feature: Verifying the Login Details
     
     Examples:
        |userName     |password|
-       | Shanmathi22 | AM29JB |
+       | Shanmathi22 | E9Z51L |
 
   @Invalid
   Scenario: User Login with Invalid credentials
@@ -42,7 +42,7 @@ Feature: Verifying the Login Details
 
     Examples: 
       | userName | password |
-      | Shan     | AM29JB   |
+      | Shan     | E9Z51L   |
 
   @WithoutUsername
   Scenario Outline: User Login without username
@@ -54,7 +54,7 @@ Feature: Verifying the Login Details
 
     Examples: 
       | password |
-      | AM29JB   |
+      | E9Z51L   |
 
   @WithoutPassword
   Scenario Outline: User Login without password

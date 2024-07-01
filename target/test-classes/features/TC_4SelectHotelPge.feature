@@ -1,4 +1,4 @@
-@SelectHotelPage
+@HotelBooking
 Feature: Select the Hotel in AdactionHotel
 
   @BookHotel
@@ -16,7 +16,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
 
   @WithoutSelection
   Scenario Outline: User not drirected to the booking page without select the hotel
@@ -33,7 +33,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
 
   @Cancel
   Scenario Outline: User redrirected to the search hotel page by clicking the cancel button
@@ -50,7 +50,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
   
   @SearchHotelLink
   Scenario Outline: User redrirected to the search hotel page by clicking the search hotel link
@@ -67,7 +67,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
 
   @BookedItineraryLink
   Scenario Outline: User can access the Booked Itinerary page from select hotel page
@@ -84,7 +84,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
 
   @ChangePasswordLink
   Scenario Outline: User can access the Change Password page from select hotel page
@@ -101,7 +101,7 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
 
   @LogoutLink
   Scenario Outline: User can logout from select hotel page
@@ -118,4 +118,4 @@ Feature: Select the Hotel in AdactionHotel
 
     Examples: 
       | userName    | password | location | hotels         | roomType | numberOfRooms | checkInDate | checkOutDate | adultperRoom | childrenPerRoom |
-      | Shanmathi22 | AM29JB   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |
+      | Shanmathi22 | E9Z51L   | Sydney   | Hotel Sunshine | Standard | 2 - Two       | 21/04/2024  | 23/04/2024   | 2 - Two      | 1 - One         |

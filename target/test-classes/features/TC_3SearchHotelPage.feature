@@ -1,4 +1,4 @@
-@SearchHotelPage
+@HotelBooking
 Feature: Search Hotels in AdactinHotel
 
    @BookHotel
@@ -15,7 +15,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @MandatoryFields
    Scenario Outline: User search the hotel by filling the mandatory fields 
@@ -31,7 +31,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | numberOfRooms|checkInDate|checkOutDate|adultperRoom|
-    |Shanmathi22| AM29JB       | Sydney   | 2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |
+    |Shanmathi22| E9Z51L       | Sydney   | 2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |
    
    @NonMandatoryFields 
    Scenario Outline: User search the hotel by filling the non mandatory fields 
@@ -47,7 +47,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | numberOfRooms                |hotels         | roomType    |adultperRoom                        |childrenPerRoom|
-    |Shanmathi22| AM29JB       | - Select Number of Rooms -   |Hotel Sunshine | Standard    |- Select Adults per Room -          |1 - One        | 
+    |Shanmathi22| E9Z51L       | - Select Number of Rooms -   |Hotel Sunshine | Standard    |- Select Adults per Room -          |1 - One        | 
     
    @WithoutLocation 
    Scenario Outline: User search the hotel by filling all the fields without location field
@@ -63,7 +63,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @WithoutNoOfRooms
    Scenario Outline: User search the hotel by filling all the fields without Number of Rooms field
@@ -79,7 +79,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         |  roomType |  numberOfRooms              |checkInDate|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  | - Select Number of Rooms -  |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  | - Select Number of Rooms -  |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
     
    @WithoutCheckInDate 
    Scenario Outline: User search the hotel by filling all the fields without Check In Date field
@@ -95,7 +95,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkOutDate|adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 23/04/2024 |2 - Two     |1 - One        |
    
    @WithoutCheckOutDate 
    Scenario Outline: User search the hotel by filling all the fields without Check Out Date field
@@ -111,7 +111,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate |adultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |2 - Two     |1 - One        |
    
    @AdultsPerRoom
    Scenario Outline: User search the hotel by filling all the fields without Adults per Room field
@@ -127,7 +127,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate |checkOutDate|adultPerRoom               |childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |21/04/2024  |- Select Adults per Room - |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      | 21/04/2024 |21/04/2024  |- Select Adults per Room - |1 - One        |
    
    @ResetButton
    Scenario Outline: User clear the search conditions by clicking reset button
@@ -143,7 +143,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | location | hotels         | roomType  |numberOfRooms|checkInDate|checkOutDate|AdultperRoom|childrenPerRoom|
-    |Shanmathi22| AM29JB       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
+    |Shanmathi22| E9Z51L       | Sydney   | Hotel Sunshine | Standard  |2 - Two      |21/04/2024 | 23/04/2024 |2 - Two     |1 - One        |
    
    @BookedItinerary 
    Scenario Outline: User can access the Booked Itinerary page from search hotel page
@@ -158,7 +158,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
    
    @ChangePassword 
    Scenario Outline: User can access the Change Password page from search hotel page
@@ -173,7 +173,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
    
    @Logout 
    Scenario Outline: User can logout from search hotel page
@@ -188,7 +188,7 @@ Feature: Search Hotels in AdactinHotel
    Examples:
     
     | userName  | password     | 
-    |Shanmathi22| AM29JB       |
+    |Shanmathi22| E9Z51L       |
   
   
     

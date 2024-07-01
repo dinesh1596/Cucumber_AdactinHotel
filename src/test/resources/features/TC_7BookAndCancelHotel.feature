@@ -1,3 +1,4 @@
+@HotelBooking
 Feature: Book and Cancel the Hotel in Adactin Hotel
 
   @BookingHotel

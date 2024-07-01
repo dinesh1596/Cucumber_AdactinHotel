@@ -1,4 +1,4 @@
-@RegistrationPage
+@HotelBooking
 Feature: Verifying the new  user registration
 
   @WithoutCaptacha
