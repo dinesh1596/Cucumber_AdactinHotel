@@ -2,6 +2,7 @@ package com.pageobjectmanager;
 
 import com.pages.BookHotelPage;
 import com.pages.BookedItineraryPage;
+import com.pages.ForgotPasswordPage;
 import com.pages.LoginPage;
 import com.pages.RegisterPage;
 import com.pages.SearchHotelPage;
@@ -15,7 +16,7 @@ public class PageObjectManager {
 	private SelectHotelPage selectHotelPage;
 	private BookHotelPage bookHotelPage;
 	private BookedItineraryPage bookedItineraryPage;
-	
+	private ForgotPasswordPage forgotPasswordPage;
 
 	public RegisterPage getRegisterPage() {
 		return (registerPage==null)?registerPage=new RegisterPage():registerPage;
@@ -35,6 +36,10 @@ public class PageObjectManager {
 	public BookedItineraryPage getBookedItineraryPage() {
 		return (bookedItineraryPage==null)?bookedItineraryPage=new BookedItineraryPage():bookedItineraryPage;
 	}
+	public ForgotPasswordPage getForgotPasswordPage() {
+		return (forgotPasswordPage==null)?forgotPasswordPage=new ForgotPasswordPage():forgotPasswordPage;
+	}
+	
 	
 	
 	
