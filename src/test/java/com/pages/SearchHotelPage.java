@@ -348,6 +348,28 @@ public class SearchHotelPage extends BaseClass {
 		Assert.assertEquals("Verify Logou Success Message", logOutMsg, logOutText);
 
 	}
+	public void userClearAllTheFillingDetailsAndClickTheSearchButton() {
+	   selectByIndex(getRoom_nos(), 0);
+	   clear(getDateIn());
+	   clear(getDateOut());
+	   selectByIndex(getAdultRoom(), 0);
+	   click(getSearchBtn());
+	}
+	
+	public void userVerifyTheErrorMessagesAreDisplayed(String locationErrText, String noOfRoomsErrText, String chechInDateErrText, String chechOutDateErrText, String adultsPerRoomErrText) {
+	    String locationErrMsg=getText(getLocationErrorMsg());
+	    Assert.assertEquals("Verify Location field error message", locationErrText, locationErrMsg);
+	    String noOfRoomsErrMsg=getText(getNoOfRoomErrorMsg());
+	    Assert.assertEquals("Verify No Of Rooms error message", noOfRoomsErrText, noOfRoomsErrMsg);
+	    String chechInDateErrMsg=getText(getDateInErrorMsg());
+	    Assert.assertEquals("Verify Location field error message", chechInDateErrText, chechInDateErrMsg);
+	    String chechOutDateErrMsg=getText(getDateOutErrorMsg());
+	    Assert.assertEquals("Verify Location field error message", chechOutDateErrText, chechOutDateErrMsg);
+	    String adultsPerRoomErrMsg=getText(getAdultsPerRoomErrorMsg());
+	    Assert.assertEquals("Verify Location field error message", adultsPerRoomErrText, adultsPerRoomErrMsg);
+	   
+	}
+
 
 
 

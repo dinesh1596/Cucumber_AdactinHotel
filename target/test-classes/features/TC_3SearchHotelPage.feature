@@ -190,5 +190,19 @@ Feature: Search Hotels in AdactinHotel
     | userName  | password     | 
     |Shanmathi22| E9Z51L       |
   
+  @SearchButton
+  Scenario Outline: User verify the error messages are displayed without entering the search condition
+  Given User is on Home Page
+  Then User Verifying the text "Existing User Login - Build 1" in Home Page
+  When User enter "<userName>" and "<password>" 
+  And User clicks the login button 
+  Then User verify the search hotel Page "Search Hotel (Fields marked with Red asterix (*) are mandatory)"
+  And User clear all the filling details and click the search button
+  Then User verify the error messages "Please Select a Location" "Please Select Total Number of Rooms" "Please Select Check-In Date" "Please Select Check-Out Date" "Please Select Adults per Room" are displayed 
+  
+  Examples:
+  
+    |userName   | password|
+    |Shanmathi22| E9Z51L  |
   
     

@@ -107,7 +107,6 @@ public class TC_1RegisterPageStep extends BaseClass {
 	public void userVerifyTheRegisterFormIsReseted() {
 	    pom.getRegisterPage().userVerifyTheRegisterFormIsReseted();
 	}
-
-
+	
 	
 }

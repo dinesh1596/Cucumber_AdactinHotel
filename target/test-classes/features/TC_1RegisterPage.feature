@@ -93,7 +93,7 @@ Feature: Verifying the new  user registration
       | Shanmathi | ShanMathi@22 | ShanMathi@22    | Shanmathi K | shanmath@gmail.com |
     
     @WithoutAnyFields
-    Scenario Outline: User can register the account by filling all the details without term and conditions field
+    Scenario Outline: User can register the account without filling all the details
     Given User is on Home Page
     And User click new user register here link
     Then User Verifying the text "New User Registration Form (Fields marked with Red asterix (*) are mandatory)" in Register Screen
@@ -140,5 +140,5 @@ Feature: Verifying the new  user registration
       | userName  | password     | confirmPassword | fullName    | emailAddress       |
       | Shanmathi | ShanMathi@22 | ShanMathi@22    | Shanmathi K | shanmath@gmail.com |
     
-      
+    
     

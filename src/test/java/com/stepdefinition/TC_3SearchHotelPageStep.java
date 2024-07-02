@@ -115,4 +115,13 @@ public class TC_3SearchHotelPageStep extends BaseClass{
 	public void userVerifyTheLogoutSuccessMessage(String logOutMsg) {
 	    pom.getSearchHotelPage().userVerifyTheLogoutSuccessMessage(logOutMsg);
 	}
+	@Then("User clear all the filling details and click the search button")
+	public void userClearAllTheFillingDetailsAndClickTheSearchButton() {
+	    pom.getSearchHotelPage().userClearAllTheFillingDetailsAndClickTheSearchButton();
+	}
+	@Then("User verify the error messages {string} {string} {string} {string} {string} are displayed")
+	public void userVerifyTheErrorMessagesAreDisplayed(String locationErrText, String noOfRoomsErrText, String chechInDateErrText, String chechOutDateErrText, String adultsPerRoomErrText) {
+	    pom.getSearchHotelPage().userVerifyTheErrorMessagesAreDisplayed(locationErrText, noOfRoomsErrText,chechInDateErrText, chechOutDateErrText, adultsPerRoomErrText);
+	}
+
 }

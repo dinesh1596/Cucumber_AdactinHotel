@@ -305,4 +305,6 @@ public class RegisterPage extends BaseClass {
        System.out.println("TermsAndConditions is empty:"+termsAndConditions); 
        
 	}
+	
+	
 }
